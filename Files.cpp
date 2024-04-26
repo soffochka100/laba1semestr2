@@ -130,6 +130,9 @@ void Files::add_elem(Catcafe** arr, int* n)
 		(*arr)[*n + i] = add_arr[i];
 
 	*n = *n + n2;
+
+	delete[] old_arr;
+	delete[] add_arr;
 }
 void Files::delete_elem(Catcafe** arr, int* n, const int del_ind)
 {
@@ -145,6 +148,9 @@ void Files::delete_elem(Catcafe** arr, int* n, const int del_ind)
 			new_arr[i] = old_arr[i];
 	}
 	*arr = new_arr;
+
+	delete[] old_arr;
+	delete[] new_arr;
 }
 void Files::update_elem(Catcafe** arr, int n, const  int elem_index, const int update_ind) {
 	string stringField;
