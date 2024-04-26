@@ -10,14 +10,15 @@ int main()
 {
 	system("chcp 1251");
 
-	int n = 1;
+	int n;
 	int stop = 0;
 	int id;
 	int field_index;
-	Catcafe* arr=new Catcafe[n];
+	Catcafe* arr= nullptr;
 	string fileName;
 	char key = ' ';
 	char key2 = ' ';
+
 	while (stop == 0) {
 		cout << "Выберите действие"
 				"\n1 - создать новую базу данных"
@@ -80,5 +81,8 @@ int main()
 				stop = 1;
 		}
 	}
+
+	delete[] arr;
+
 	return 0;
 }
